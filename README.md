@@ -2,7 +2,7 @@
 
 This is an automated tool to generate project reports, based on [this template](https://github.com/raymonschouwenaar/tech-report-temp), using [Gulp](http://gulpjs.com/).
 
-<p style="text-align: center">![REPORT](https://raw.githubusercontent.com/j3lte/project-reports/master/reports.jpg)</p>
+![REPORT](http://i.imgur.com/gOYNkQe.jpg)
 
 **What is included?**
 
