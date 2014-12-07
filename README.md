@@ -83,13 +83,14 @@ The livereload (see server/index.html) notes the scroll position of the window. 
 * [Github CSS](https://github.com/sindresorhus/github-markdown-css/), looks practically identical to Github Markdown
 * [jQuery cookie](https://github.com/carhartl/jquery-cookie), to keep the scroll position saved after live reload
 
-### TODO
+### Changelog
 
-* Fix the Prism line-numbering. At the moment it adds an extra linenumber at the end, which I find nasty
+See [History](https://raw.githubusercontent.com/j3lte/project-reports/master/History.md)
+
+### TODO/BUGS
+
 * Cleanup Gulp tasks, everything is now in a single taks
 * Add FTP/SSH upload to a specified server (publish)
-* Move preview dependencies from static files to bower components
-* Subsequently, add bower install to npm install to avoid any unnecessary install commands
 
 ## License
 

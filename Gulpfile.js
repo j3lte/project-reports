@@ -1,3 +1,8 @@
+/**
+ * Project Report Generator
+ * Copyright (c) 2014-2014, Jelte Lagendijk. (MIT Licensed)
+ * https://github.com/j3lte/project-reports
+ */
 var gulp = require('gulp'),
     replace = require('gulp-replace'),
     rename = require("gulp-rename"),
@@ -54,8 +59,7 @@ gulp.task('server', function(next) {
 
   server
     .use(serveStatic("./server"))
-    .use('/marked', serveStatic(__dirname + '/node_modules/marked/'))
-    .use('/css', serveStatic(__dirname + '/node_modules/github-markdown-css/'))
+    .use('/vendor', serveStatic(__dirname + '/vendor/'))
     .use('/reports', serveStatic(__dirname + '/' + config.reportdir + '/'))
     .listen(5000, next);
 });

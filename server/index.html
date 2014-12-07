@@ -6,20 +6,37 @@
         <title>Project Report</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/css/github-markdown.css">
-        <link rel="stylesheet" type="text/css" href="prism.css">
+        <link rel="stylesheet" type="text/css" href="/vendor/github-markdown-css/github-markdown.css">
+        <link rel="stylesheet" type="text/css" href="/vendor/prism/themes/prism.css">
+        <link rel="stylesheet" type="text/css" href="/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
         <style>
+            /* Main markdown body */
             .markdown-body {
                 min-width: 200px;
                 max-width: 790px;
                 margin: 0 auto;
                 padding: 30px;
             }
+            /* Small dirty Prism line-numbers hack to eliminate last linenumber */
+
+            .line-numbers .line-numbers-rows span:last-child {
+                display: none;
+            }
+
         </style>
-        <script src="jquery-1.11.1.min.js"></script>
-        <script src="jquery.cookie.js"></script>
-        <script src="prism.js"></script>
-        <script src="/marked/lib/marked.js"></script>
+
+        <script src="/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="/vendor/jquery-cookie/jquery.cookie.js"></script>
+
+        <script src="/vendor/prism/prism.js"></script>
+        <script src="/vendor/prism/plugins/line-numbers/prism-line-numbers.js"></script>
+
+        <script src="/vendor/prism/components.js"></script>
+        <script src="/vendor/prism/vendor/promise.js"></script>
+
+        <script src="load-syntax-highlighters.js"></script>
+
+        <script src="/vendor/marked/lib/marked.js"></script>
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     </head>
     <body>
@@ -42,8 +59,9 @@
                 if (file) {
                     $.get('/reports/' + decodeURIComponent(file), function( data ) {
                             $('#content').html(marked(data));
-                            // line numbers add an extra number in Prism, need to fix this
-                            //$('#content > pre').addClass('line-numbers');
+                            // TODO :: line numbers add an extra number in Prism, need to fix this
+                            $('#content > pre').attr('data-line-numbers', true);
+                            $('#content > pre').addClass('line-numbers');
                             Prism.highlightAll();
                             if (scroll) {
                                 $(window).scrollTop(scroll);
@@ -66,8 +84,6 @@
                     $.cookie('scroll', $(window).scrollTop());
                 });
             });
-
-
         </script>
     </body>
 </html>

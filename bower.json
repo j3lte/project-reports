@@ -1,0 +1,12 @@
+{
+  "name": "project-reports",
+  "private": "true",
+  "dependencies": {},
+  "devDependencies": {
+    "github-markdown-css": "~2.0.1",
+    "jquery": "~1.11.1",
+    "prism": "gh-pages",
+    "jquery-cookie": "~1.4.1",
+    "marked": "~0.3.2"
+  }
+}
