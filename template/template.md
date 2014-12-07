@@ -3,12 +3,12 @@
 
 **Category:** <<category>>
 
-**Date:** March 2014
+**Date:** <<projectDate>>
 
 ----------------------------------------------------------------------
 
 ### Technical Report description
-Cupcake ipsum dolor. Sit amet jelly tart cake dragée jelly beans sweet roll chocolate cake. Sweet roll halvah I love. Unerdwear.com topping tart I love marzipan. Brownie sugar plum I love sesame snaps oat cake. Apple pie lemon drops chocolate danish topping dessert marshmallow dessert. Tart candy canes unerdwear.com ice cream tiramisu dragée applicake. Apple pie brownie sesame snaps oat cake caramels halvah danish pudding jelly beans. Gummies chocolate cake I love croissant cookie.
+Cupcake ipsum dolor. Sit amet jelly tart cake dragée jelly be ans sweet roll chocolate cake. Sweet roll halvah I love. Unerdwear.com topping tart I love marzipan. Brownie sugar plum I love sesame snaps oat cake. Apple pie lemon drops chocolate danish topping desse rt marshmallow dessert. Tart candy canes unerdwear.com ice cream tiramisu dragée applicake. Apple pie brownie sesame snaps oat cake caramels halvah danish pudding jelly beans. Gummies chocolatee cake I love croissant cookie.
 
 - list item 1
 - list item 2
@@ -37,7 +37,7 @@ _I love I love muffin candy canes marshmallow muffin powder. Jelly chupa chups o
 ## Write your code or tutorial
 
 **CSS**
-<pre lang="css" toggle="no">
+```css
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   body:first-of-type pre::after {
     content: 'highlight: ' attr(class);
@@ -63,27 +63,26 @@ li[lang=ru] {
   background: url('hatch.png') /* wtf? */;  color: #F0F0F0 !important;
   width: 100%;
 }
-</pre>
+```
 
 **HTML**
-<pre lang="html" toggle="no">
+```html
     <code>
         <article>
             <section></section>
         </article>
     </code>
-</pre>
-_This is an note_
+```
 
 **Javascript**
-<pre lang="js" toggle="no">
+```javascript
 (function(){
     var init, ed, qt, first_init, DOM, el, i, mce = 0;
 };
-</pre>
+```
 
 **Other**
-<pre lang="bash" toggle="no">
+```bash
 class ntp {
     case $operatingsystem {
         centos, sles, redhat: {
@@ -116,7 +115,7 @@ class ntp {
             content => template("ntp/${conf_template}"),
         }
 }
-</pre>
+```
 
 ----------------------------------------------------------------------
 ### Add some notes for the editor

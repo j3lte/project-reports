@@ -1,16 +1,19 @@
-var gulp = require('gulp');
-var replace = require('gulp-replace');
-var rename = require("gulp-rename");
-var prompt = require("gulp-prompt");
-var livereload = require('gulp-livereload');
-var watch = require('gulp-watch');
+var gulp = require('gulp'),
+    replace = require('gulp-replace'),
+    rename = require("gulp-rename"),
+    prompt = require("gulp-prompt"),
+    livereload = require('gulp-livereload'),
+    watch = require('gulp-watch');
 
-var config = require('./config.json');
-var filename = 'empty_rapport';
-var toWatch = '*.md';
-var template_path = 'template/template.md';
+var config = require('./config.json'),
+    filename = 'empty_rapport',
+    toWatch = '*.md',
+    template_path = 'template/template.md';
+
 var today = new Date();
-
+var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+var projectDate = monthNames[today.getMonth()] + ' ' + today.getFullYear();
 var dateString = today.getFullYear() + ("0" + (today.getMonth() + 1)).slice(-2) + ("0" + (today.getDay() + 1)).slice(-2);
 
 var target = gulp.src(template_path);
@@ -29,7 +32,9 @@ gulp.task('create', [], function() {
             filename += '-' + config.surName;
             filename += '-' + config.category;
             filename += '.md';
+            toWatch = filename;
             target
+                .pipe(replace('<<projectDate>>', projectDate))
                 .pipe(replace('<<projectTitle>>', res.projectTitle))
                 .pipe(replace('<<firstName>>', config.firstName))
                 .pipe(replace('<<surName>>', config.surName))
@@ -47,14 +52,23 @@ gulp.task('server', function(next) {
         serveStatic = require('serve-static');
         server = connect();
 
-  server.use(serveStatic("./server")).listen(5000, next);
+  server
+    .use(serveStatic("./server"))
+    .use('/marked', serveStatic(__dirname + '/node_modules/marked/'))
+    .use('/css', serveStatic(__dirname + '/node_modules/github-markdown-css/'))
+    .use('/reports', serveStatic(__dirname + '/' + config.reportdir + '/'))
+    .listen(5000, next);
 });
 
 gulp.task('watch', ['server'], function() {
     var server = livereload();
-    gulp.watch('reports/*.md').on('change', function(file) {
-      server.changed(file.path);
-  });
+    server.changed(); // fire changed in order to get livereload started
+    gulp
+        .watch('reports/' + toWatch).on('change', function(file) {
+            server.changed(file.path);
+        });
 });
 
 gulp.task('default', ['create']);
+
+gulp.task('preview', ['watch']);
