@@ -85,7 +85,7 @@ The livereload (see server/index.html) notes the scroll position of the window. 
 
 ### Changelog
 
-See [History](https://raw.githubusercontent.com/j3lte/project-reports/master/History.md)
+See [History](https://github.com/j3lte/project-reports/blob/master/History.md)
 
 ### TODO/BUGS
 
