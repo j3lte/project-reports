@@ -60,7 +60,7 @@ Now you can start editing the file in the report folder
 
 >Jelte, I have an editor, but I want to preview my Markdown file. Is there a way?
 
-Glad you asked, the answer is: Yes ofcourse! A little bit out of the ordinary, I decided to dive some further into Gulp (because Gulp is awesome). So I came up with a solution to create a live preview.
+Glad you asked, the answer is: Yes ofcourse!
 
 * Start the preview
 
@@ -70,11 +70,11 @@ gulp preview
 
 * Open your browser with the live preview. The url is:
 
-http://localhost:5000?file=filename.md
+[http://localhost:5000?file=filename.md](http://localhost:5000?file=filename.md)
 
 Enjoy your preview! (Guess how I wrote this README.md ;-) )
 
-The livereload (see server/index.html) notes the scroll position of the window. This means that if you change the file, the window will reload and scroll to the previous position (normally LiveReload will make your window scroll to the top of the page)
+The livereload (see [server/index.html](https://github.com/j3lte/project-reports/blob/master/server/index.html)) notes the scroll position of the window. This means that if you change the file, the window will reload and scroll to the previous position (normally LiveReload will make your window scroll to the top of the page)
 
 **The preview has the following plugins enabled:**
 
@@ -89,8 +89,10 @@ See [History](https://github.com/j3lte/project-reports/blob/master/History.md)
 
 ### TODO/BUGS
 
+* Currently, HTML syntax highlighting is not working. I might change the highlighter (HTML highlighting is not supported in Prism at the moment)
 * Cleanup Gulp tasks, everything is now in a single taks
 * Add FTP/SSH upload to a specified server (publish)
+* I might change this into a new project and provide a standalone client (or use something like Yeoman), replacing Gulp
 
 ## License
 
