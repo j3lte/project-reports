@@ -5,6 +5,7 @@
   * Add bower install to npm postinstall
   * Async load code highlighters from prism/components
   * Add dirty stylesheet hack to hide last line number in Prism
+  * Cleanup some dependencies
 
 0.1.0 / 2014-12-07
 ==================
