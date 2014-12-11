@@ -102,7 +102,6 @@ See [History](https://github.com/j3lte/project-reports/blob/master/History.md)
 ### TODO/BUGS
 
 * Currently, HTML syntax highlighting is not working. I might change the highlighter (HTML highlighting is not supported in Prism at the moment)
-* Cleanup Gulp tasks, everything is now in a single taks
 * Add FTP/SSH upload to a specified server (publish)
 * I might change this into a new project and provide a standalone client (or use something like Yeoman), replacing Gulp
 

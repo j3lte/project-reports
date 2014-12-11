@@ -52,9 +52,6 @@ gulp.task('create', [], function() {
     }))
 });
 
-
-//cat reports/README.md | grep "\`\`\`" | sed -e 's/^```$/<\/pre>/g' -e 's/^```\(.*\)$/<pre lang="\1">/g'
-
 gulp.task('generate', function() {
     gulp.src(config.reportdir + '/*.md')
         .pipe(replace(/```\n/g, '</pre>\n'))
