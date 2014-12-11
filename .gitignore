@@ -1,8 +1,9 @@
-/vendor/*
-/node_modules/*
-/reports/*
-
+/vendor
+/node_modules
 /.bower
+
+/reports
+/out
 
 *.sublime-project
 *.sublime-workspace

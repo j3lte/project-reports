@@ -56,6 +56,18 @@ Gulp will generate a new report, in the mentioned folder, with the following nam
 
 Now you can start editing the file in the report folder
 
+### Generate
+
+Because the company only accepts Markdown with the code inside ```<pre lang=""></pre>``` blocks, it conflicts with the GFM style. So, I created a new gulp task:
+
+```bash
+gulp generate
+```
+
+This will basically replace all backticks (\`\`\`) with ```<pre></pre>``` blocks
+
+They will be placed in the config.outputdir. These reports can be sent.
+
 ### Preview
 
 >Jelte, I have an editor, but I want to preview my Markdown file. Is there a way?

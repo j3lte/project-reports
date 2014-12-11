@@ -2,5 +2,6 @@
   "firstName" : "first",
   "surName" : "last",
   "category" : "frontend",
-  "reportdir" : "reports"
+  "reportdir" : "reports",
+  "outputdir" : "out"
 }
