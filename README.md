@@ -9,7 +9,7 @@ This is an automated tool to generate project reports, based on [this template](
 * Sample template. This is a straight copy from [Raymon Schouwenaar](https://github.com/raymonschouwenaar/), with the exception of some code highlighting. This matches the [Github syntax](https://help.github.com/articles/github-flavored-markdown/).
 * Gulpfile to generate and preview (see below)
 
-### Setup
+### <a name="setup"></a>Setup
 
 * Clone the git repository (because this is a specific tool, I chose not to publish on NPM):
 
@@ -34,7 +34,7 @@ npm install
 }
 ```
 
-### Getting started
+### <a name="start"></a>Getting started
 
 Create a new project report:
 
@@ -56,7 +56,7 @@ Gulp will generate a new report, in the mentioned folder, with the following nam
 
 Now you can start editing the file in the report folder
 
-### Generate
+### <a name="generate"></a>Generate
 
 Because the company only accepts Markdown with the code inside ```<pre lang=""></pre>``` blocks, it conflicts with the GFM style. So, I created a new gulp task:
 
@@ -68,7 +68,7 @@ This will basically replace all backticks (\`\`\`) with ```<pre></pre>``` blocks
 
 They will be placed in the config.outputdir. These reports can be sent.
 
-### Preview
+### <a name="preview"></a>Preview
 
 >Jelte, I have an editor, but I want to preview my Markdown file. Is there a way?
 
@@ -95,17 +95,17 @@ The livereload (see [server/index.html](https://github.com/j3lte/project-reports
 * [Github CSS](https://github.com/sindresorhus/github-markdown-css/), looks practically identical to Github Markdown
 * [jQuery cookie](https://github.com/carhartl/jquery-cookie), to keep the scroll position saved after live reload
 
-### Changelog
+### <a name="changelog"></a>Changelog
 
 See [History](https://github.com/j3lte/project-reports/blob/master/History.md)
 
-### TODO/BUGS
+### <a name="todo"></a>TODO/BUGS
 
 * Currently, HTML syntax highlighting is not working. I might change the highlighter (HTML highlighting is not supported in Prism at the moment)
 * Add FTP/SSH upload to a specified server (publish)
 * I might change this into a new project and provide a standalone client (or use something like Yeoman), replacing Gulp
 
-## License
+## <a name="license"></a>License
 
 Copyright (c) 2014-2014, Jelte Lagendijk. (MIT License)
 
