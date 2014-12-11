@@ -1,4 +1,5 @@
 [0.1.2](https://github.com/j3lte/project-reports/releases/tag/v0.1.2) / 2014-12-11
+==================
 
   * Adding backtick replacement, see [commit](https://github.com/j3lte/project-reports/commit/47066e2086be144f47edcb8777da0e09ce97df85) and [README](https://github.com/j3lte/project-reports/blob/master/README.md#generate)
 
