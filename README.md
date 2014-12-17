@@ -30,7 +30,8 @@ npm install
   "firstName"   : "Jelte",      // Self explanatory
   "surName"     : "Lagendijk",  // Self explanatory
   "category"    : "Frontend",   // At our company we either use Frontend or System
-  "reportdir"   : "reports"     // The output dir that will be generated in your folder
+  "reportdir"   : "reports",    // The output dir that will be generated in your folder
+  "outputdir"   : "out"         // The output dir where our company reports (rewritten code blocks) will be exported
 }
 ```
 
